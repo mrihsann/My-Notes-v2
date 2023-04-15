@@ -2,6 +2,8 @@
 
 ### [Play Store Link](https://play.google.com/store/apps/details?id=com.ihsanarslan.mynotes)
 
+#### In order not to get an error in the project, you need to connect your firebase account. There is no google-services.json file in the project. Add your own json file.
+
 ## Project Features
  - ROOM
  - Firebase
