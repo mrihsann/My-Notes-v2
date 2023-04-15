@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_nav"
+    app:startDestination="@id/listFragment">
+
+    <fragment
+        android:id="@+id/listFragment"
+        android:name="com.ihsanarslan.mynotes.view.ListFragment"
+        android:label="fragment_list"
+        tools:layout="@layout/fragment_list" >
+        <action
+            android:id="@+id/action_listFragment_to_addFragment"
+            app:destination="@id/addFragment" />
+        <action
+            android:id="@+id/action_listFragment_to_updateFragment"
+            app:destination="@id/updateFragment" />
+        <action
+            android:id="@+id/action_listFragment_self"
+            app:destination="@id/listFragment" />
+        <action
+            android:id="@+id/action_listFragment_to_trashFragment"
+            app:destination="@id/trashFragment" />
+        <action
+            android:id="@+id/action_listFragment_to_settingsFragment"
+            app:destination="@id/settingsFragment" />
+        <action
+            android:id="@+id/action_listFragment_to_settingsLoginFragment"
+            app:destination="@id/settingsLoginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addFragment"
+        android:name="com.ihsanarslan.mynotes.view.AddFragment"
+        android:label="fragment_add"
+        tools:layout="@layout/fragment_add" >
+        <action
+            android:id="@+id/action_addFragment_to_listFragment"
+            app:destination="@id/listFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/updateFragment"
+        android:name="com.ihsanarslan.mynotes.view.UpdateFragment"
+        android:label="fragment_update"
+        tools:layout="@layout/fragment_update" >
+        <action
+            android:id="@+id/action_updateFragment_to_listFragment"
+            app:destination="@id/listFragment" />
+        <argument
+            android:name="title"
+            app:argType="string" />
+        <argument
+            android:name="content"
+            app:argType="string" />
+        <argument
+            android:name="color"
+            app:argType="integer" />
+        <argument
+            android:name="id"
+            app:argType="integer" />
+        <argument
+            android:name="liked"
+            app:argType="boolean"
+            android:defaultValue="false" />
+    </fragment>
+    <fragment
+        android:id="@+id/trashFragment"
+        android:name="com.ihsanarslan.mynotes.view.TrashFragment"
+        android:label="fragment_trash"
+        tools:layout="@layout/fragment_trash" >
+        <action
+            android:id="@+id/action_trashFragment_to_listFragment"
+            app:destination="@id/listFragment" />
+        <action
+            android:id="@+id/action_trashFragment_self"
+            app:destination="@id/trashFragment" />
+        <action
+            android:id="@+id/action_trashFragment_to_addFragment"
+            app:destination="@id/addFragment" />
+        <action
+            android:id="@+id/action_trashFragment_to_settingsFragment"
+            app:destination="@id/settingsFragment" />
+        <action
+            android:id="@+id/action_trashFragment_to_settingsLoginFragment"
+            app:destination="@id/settingsLoginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.ihsanarslan.mynotes.view.SettingsFragment"
+        android:label="fragment_settings"
+        tools:layout="@layout/fragment_settings" >
+        <action
+            android:id="@+id/action_settingsFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+        <action
+            android:id="@+id/action_settingsFragment_to_trashFragment"
+            app:destination="@id/trashFragment" />
+        <action
+            android:id="@+id/action_settingsFragment_to_listFragment"
+            app:destination="@id/listFragment" />
+        <action
+            android:id="@+id/action_settingsFragment_to_settingsLoginFragment"
+            app:destination="@id/settingsLoginFragment" />
+        <action
+            android:id="@+id/action_settingsFragment_self"
+            app:destination="@id/settingsFragment" />
+        <action
+            android:id="@+id/action_settingsFragment_to_cloudFragment"
+            app:destination="@id/cloudFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.ihsanarslan.mynotes.view.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_loginFragment_to_listFragment"
+            app:destination="@id/listFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_settingsLoginFragment"
+            app:destination="@id/settingsLoginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/settingsLoginFragment"
+        android:name="com.ihsanarslan.mynotes.view.SettingsLoginFragment"
+        android:label="fragment_settings_login"
+        tools:layout="@layout/fragment_settings_login" >
+        <action
+            android:id="@+id/action_settingsLoginFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+        <action
+            android:id="@+id/action_settingsLoginFragment_to_trashFragment"
+            app:destination="@id/trashFragment" />
+        <action
+            android:id="@+id/action_settingsLoginFragment_to_listFragment"
+            app:destination="@id/listFragment" />
+        <action
+            android:id="@+id/action_settingsLoginFragment_self"
+            app:destination="@id/settingsLoginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/cloudFragment"
+        android:name="com.ihsanarslan.mynotes.view.CloudFragment"
+        android:label="fragment_cloud"
+        tools:layout="@layout/fragment_cloud" >
+        <action
+            android:id="@+id/action_cloudFragment_to_settingsFragment"
+            app:destination="@id/settingsFragment" />
+        <action
+            android:id="@+id/action_cloudFragment_self"
+            app:destination="@id/cloudFragment" />
+        <action
+            android:id="@+id/action_cloudFragment_to_readCloudNoteFragment"
+            app:destination="@id/readCloudNoteFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/readCloudNoteFragment"
+        android:name="com.ihsanarslan.mynotes.view.ReadCloudNoteFragment"
+        android:label="fragment_read_cloud_note"
+        tools:layout="@layout/fragment_read_cloud_note" >
+        <action
+            android:id="@+id/action_readCloudNoteFragment_to_cloudFragment"
+            app:destination="@id/cloudFragment" />
+        <argument
+            android:name="title"
+            app:argType="string" />
+        <argument
+            android:name="content"
+            app:argType="string" />
+        <argument
+            android:name="color"
+            app:argType="integer" />
+    </fragment>
+</navigation>

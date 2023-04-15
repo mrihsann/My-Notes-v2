@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".view.AddFragment">
+
+    <LinearLayout
+        android:id="@+id/anaLayoutU"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color2"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/toolBarU"
+            layout="@layout/update_fragment_menu"
+            android:background="@color/design_default_color_background">
+
+        </include>
+
+        <LinearLayout
+            android:id="@+id/colors"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal|center_vertical"
+            android:orientation="horizontal"
+            android:paddingTop="3dp"
+            android:paddingBottom="3dp">
+
+            <ImageView
+                android:id="@+id/color1U"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:src="@drawable/round_button" />
+
+            <ImageView
+                android:id="@+id/color2U"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:src="@drawable/round_button2" />
+
+            <ImageView
+                android:id="@+id/color3U"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:src="@drawable/round_button3" />
+
+            <ImageView
+                android:id="@+id/color4U"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:src="@drawable/round_button4" />
+
+            <ImageView
+                android:id="@+id/color5U"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:src="@drawable/round_button5" />
+
+            <ImageView
+                android:id="@+id/color6U"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:src="@drawable/round_button6" />
+
+        </LinearLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <EditText
+                    android:id="@+id/addTitleU"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@android:color/transparent"
+                    android:ems="10"
+                    android:fontFamily="@font/nunito"
+                    android:gravity="start"
+                    android:hint="@string/tap_to_for_title"
+                    android:inputType="textMultiLine"
+                    android:paddingStart="15dp"
+                    android:paddingEnd="15dp"
+                    android:textColor="#000000"
+                    android:textColorHighlight="#40000000"
+                    android:textColorHint="#81000000"
+                    android:textColorLink="#000000"
+                    android:textCursorDrawable="@color/black"
+                    android:textSize="35sp" />
+
+                <EditText
+                    android:id="@+id/addContentU"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@android:color/transparent"
+                    android:ems="10"
+                    android:fontFamily="@font/nunito"
+                    android:gravity="start"
+                    android:hint="@string/tap_to_for_content"
+                    android:inputType="textMultiLine"
+                    android:paddingStart="15dp"
+                    android:paddingEnd="15dp"
+                    android:paddingBottom="30dp"
+                    android:textColor="#000000"
+                    android:textColorHighlight="#40000000"
+                    android:textColorHint="#81000000"
+                    android:textColorLink="#000000"
+                    android:textCursorDrawable="@color/black"
+                    android:textSize="20sp" />
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+</layout>
