@@ -8,6 +8,7 @@
  - ROOM
  - Firebase
  - MVVM with Clean Architecture
+ - Live Data
  - Navigation Components
  - ViewBinding
  - Google Ads
